@@ -1,0 +1,25 @@
+<section class="section-6">
+  <include
+    src="./components/title.html"
+    locals='{
+    "title": "Places",
+    "className": "section-6__title"
+  }'
+  ></include>
+
+  <select class="section-6__option">
+    <option value="SAN FRANCISCO" class="option-item">SAN FRANCISCO</option>
+    <option value="SOUTH LILIANA" class="option-item">SOUTH LILIANA</option>
+    <option value="BLICKVIEW" class="option-item">BLICKVIEW</option>
+    <option value="NEW RAVEN" class="option-item">NEW RAVEN</option>
+  </select>
+
+  <div class="section-6__imgs">
+    <include
+      src="./components/place-imgs.html"
+      locals='{
+      "list": "[`../assets/images/section-6/card1.png`, `../assets/images/section-6/card2.png`, `../assets/images/section-6/card3.png`, `../assets/images/section-6/card4.png`, `../assets/images/section-6/card5.png`, `../assets/images/section-6/card6.png`]"
+    }'
+    ></include>
+  </div>
+</section>

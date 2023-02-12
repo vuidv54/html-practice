@@ -1,0 +1,23 @@
+@use '../abstracts/' as abstracts;
+
+.header {
+  padding: 13px 16px 14px 20px;
+  height: abstracts.$header-height;
+  background-color: abstracts.$second-pimary;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  @include abstracts.flex(center, space-between);
+
+  &__title {
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: abstracts.$first-pimary;
+  }
+
+  &__menu {
+    cursor: pointer;
+  }
+}

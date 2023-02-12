@@ -1,0 +1,45 @@
+<section class="section-3">
+  <include
+    src="./components/title.html"
+    locals='{
+    "title": "Choose Your Plan",
+    "className": "section-3__title"
+  }'
+  ></include>
+
+  <include
+    src="./components/plan-card.html"
+    locals='{
+    "className": "",
+    "cardName": "Silver",
+    "prices": "49",
+    "desc_1": "Personal Account",
+    "desc_2": "25 GB Discspace",
+    "desc_3": "50 Uploads per day"
+  }'
+  ></include>
+
+  <include
+    src="./components/plan-card.html"
+    locals='{
+    "className": "gold-color",
+    "cardName": "Gold",
+    "prices": "99",
+    "desc_1": "Personal Account",
+    "desc_2": "50 GB Discspace",
+    "desc_3": "500 Uploads per day"
+  }'
+  ></include>
+
+  <include
+    src="./components/plan-card.html"
+    locals='{
+  "className": "",
+  "cardName": "Platinum",
+  "prices": "299",
+  "desc_1": "Team Account",
+  "desc_2": "500 GB Discspace",
+  "desc_3": "Unlimited Uploads per day"
+}'
+  ></include>
+</section>

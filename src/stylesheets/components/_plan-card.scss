@@ -1,0 +1,98 @@
+@use '../abstracts/' as abstracts;
+
+.plan-card {
+  & + & {
+    margin-top: 24px;
+  }
+
+  max-width: 240px;
+  margin: 0 auto;
+  padding: 28px 40px;
+  background: linear-gradient(
+    224.09deg,
+    rgba(255, 255, 255, 0.7) 5.13%,
+    rgba(255, 255, 255, 7e-5) 90.88%
+  );
+  background-blend-mode: soft-light;
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+
+  @include abstracts.flex(center, center, column);
+
+  &.gold-color {
+    position: relative;
+    z-index: 1;
+    background-color: abstracts.$first-pimary;
+
+    .plan-card__name {
+      color: abstracts.$second-pimary;
+    }
+
+    .plan-card__button {
+      color: #fff;
+      background-color: abstracts.$second-pimary;
+    }
+  }
+
+  &__name {
+    font-size: 12px;
+    font-weight: 400;
+    color: abstracts.$first-pimary;
+    text-transform: uppercase;
+  }
+
+  &__prices {
+    font-weight: 400;
+    font-size: 32px;
+    color: #fff;
+    width: 85px;
+    text-align: center;
+    position: relative;
+
+    .prices-unit {
+      position: absolute;
+      top: 10px;
+      left: 8px;
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 13px;
+    }
+  }
+
+  &__year {
+    font-weight: 400;
+    font-size: 12px;
+    color: #fff;
+    margin-bottom: 14px;
+  }
+
+  &__desc {
+    color: #fff;
+    @include abstracts.flex(center, center, column);
+
+    .desc {
+      text-align: center;
+      font-weight: 400;
+      font-size: 11px;
+    }
+
+    .desc + .desc {
+      margin-top: 4px;
+    }
+  }
+
+  &__button {
+    margin-top: 24px;
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 9px 0;
+    border-radius: 50px;
+    font-size: 11px;
+    line-height: 13px;
+    font-family: 'Roboto';
+    letter-spacing: 1px;
+    cursor: pointer;
+    background-color: abstracts.$first-pimary;
+  }
+}

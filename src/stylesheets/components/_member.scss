@@ -1,0 +1,40 @@
+@use '../abstracts/' as abstracts;
+
+.member {
+  & + & {
+    margin-top: 36px;
+  }
+
+  max-width: 400px;
+  margin: 0 auto;
+
+  @include abstracts.flex();
+  gap: 21px;
+
+  &__avatar {
+    .avatar-img {
+      $avatar-width: 48px;
+      width: $avatar-width;
+      height: $avatar-width;
+    }
+  }
+
+  &__info {
+    .info-name {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    .info-job {
+      margin-bottom: 9px;
+    }
+
+    .info-job,
+    .info-description {
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 16px;
+    }
+  }
+}

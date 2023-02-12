@@ -1,0 +1,18 @@
+@use '../abstracts/' as abstracts;
+
+.sign-up-form {
+  background: linear-gradient(
+    224.09deg,
+    rgba(255, 255, 255, 0.7) 5.13%,
+    rgba(255, 255, 255, 7e-5) 90.88%
+  );
+  background-blend-mode: soft-light;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    display: block;
+  }
+}

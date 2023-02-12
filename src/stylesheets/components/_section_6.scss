@@ -1,0 +1,32 @@
+@use '../abstracts/' as abstracts;
+
+.section-6 {
+  text-align: center;
+  padding: 37px 41px 40px 41px;
+  background-color: #f3f3f3;
+
+  &__title {
+    line-height: 23px;
+    margin-bottom: 18px;
+  }
+
+  &__option {
+    $width: 144px;
+    width: $width;
+    border-radius: 48px;
+    padding: 4px 27px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 25px;
+    border: 1px solid abstracts.$second-pimary;
+  }
+
+  &__imgs {
+    margin: 0 auto;
+    display: grid;
+    gap: 8px;
+    max-width: 360px;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  }
+}

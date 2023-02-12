@@ -1,0 +1,60 @@
+@use '../abstracts/' as abstracts;
+
+.section-4 {
+  padding: 42px 40px 56px 40px;
+  text-align: center;
+  @include abstracts.flex(center, center, column);
+
+  &__avatar {
+    $img-width: 87.72px;
+    width: $img-width;
+    height: $img-width;
+    margin-bottom: 10.28px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    margin-bottom: 20px;
+  }
+
+  &__dots {
+    @include abstracts.flex(center, center);
+    gap: 23px;
+
+    .dot-item {
+      $dot-width: 8px;
+      display: block;
+      width: $dot-width;
+      height: 8px;
+      background-color: abstracts.$second-pimary;
+      border-radius: 50%;
+      position: relative;
+      z-index: 1;
+
+      &.dot-item--no-active {
+        &::after {
+          $dot-inner-width: 4px;
+          content: '';
+          display: block;
+          position: absolute;
+          width: $dot-inner-width;
+          height: $dot-inner-width;
+          background-color: #fff;
+          border-radius: 50%;
+          transform: translate(-50%, -50%);
+          top: 50%;
+          left: 50%;
+        }
+      }
+    }
+  }
+}

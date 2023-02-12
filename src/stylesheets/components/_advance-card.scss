@@ -1,0 +1,66 @@
+@use '../abstracts/' as abstracts;
+
+.advance-card {
+  & + & {
+    margin-top: 40px;
+  }
+
+  max-width: 240px;
+  margin: 0 auto;
+
+  background: linear-gradient(
+    223.49deg,
+    rgba(0, 0, 0, 0.0001) 4.85%,
+    rgba(0, 0, 0, 0.401127) 96.5%
+  );
+  background-blend-mode: multiply;
+  border-radius: 8px;
+
+  padding: 36px 32px 25px 32px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+
+  &__name {
+    color: abstracts.$first-pimary;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 19.78px;
+  }
+
+  &__img {
+    $img-width: 50px;
+    width: $img-width;
+    margin: 0 auto;
+    margin-bottom: 23px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    margin-bottom: 8px;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    margin-bottom: 19.26px;
+  }
+
+  &__button {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 1px;
+    margin: 0 8px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 50px;
+    padding: 9px 0;
+    cursor: pointer;
+    background-color: abstracts.$first-pimary;
+  }
+}

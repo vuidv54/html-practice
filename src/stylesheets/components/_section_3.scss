@@ -1,0 +1,15 @@
+@use '../abstracts/' as abstracts;
+
+.section-3 {
+  padding: 52px 50px 42px 50px;
+  background-color: abstracts.$second-pimary;
+
+  &__title {
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 20px;
+  }
+}
