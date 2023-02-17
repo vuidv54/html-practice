@@ -19,6 +19,15 @@
 
   @include abstracts.flex(center, center, column);
 
+  &.platinum {
+    background: linear-gradient(
+      223.49deg,
+      rgba(0, 0, 0, 0.0001) 4.85%,
+      rgba(0, 0, 0, 0.401127) 96.5%
+    );
+    background-blend-mode: multiply;
+  }
+
   &.gold-color {
     position: relative;
     z-index: 1;
