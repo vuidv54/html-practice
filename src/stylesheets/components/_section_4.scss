@@ -10,6 +10,12 @@
     width: $img-width;
     height: $img-width;
     margin-bottom: 10.28px;
+
+    @include abstracts.tablet {
+      $img-width: 104px;
+      width: $img-width;
+      height: $img-width;
+    }
   }
 
   &__title {
@@ -24,6 +30,10 @@
     font-size: 11px;
     line-height: 16px;
     margin-bottom: 20px;
+
+    @include abstracts.tablet {
+      max-width: 470px;
+    }
   }
 
   &__dots {

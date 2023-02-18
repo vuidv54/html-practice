@@ -5,7 +5,13 @@
     margin-top: 24px;
   }
 
-  max-width: 240px;
+  @include abstracts.tablet {
+    & + & {
+      margin-top: 0;
+    }
+  }
+
+  width: 220px;
   margin: 0 auto;
   padding: 28px 40px;
   background: linear-gradient(
@@ -48,20 +54,27 @@
     font-weight: 400;
     color: abstracts.$first-pimary;
     text-transform: uppercase;
+
+    @include abstracts.tablet {
+      margin-bottom: 8px;
+    }
   }
 
   &__prices {
     font-weight: 400;
     font-size: 32px;
     color: #fff;
-    width: 85px;
     text-align: center;
     position: relative;
+
+    @include abstracts.tablet {
+      font-size: 36px;
+    }
 
     .prices-unit {
       position: absolute;
       top: 10px;
-      left: 8px;
+      left: -12px;
       font-weight: 400;
       font-size: 11px;
       line-height: 13px;

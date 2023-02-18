@@ -12,6 +12,10 @@
     top: 92px;
     left: 60%;
     transform: translateX(-60%);
+    @include abstracts.tablet {
+      left: 50%;
+      transform: translateX(0);
+    }
   }
 
   &__title {
@@ -24,5 +28,10 @@
     transform: translateX(-60%);
     z-index: 5;
     width: 159px;
+
+    @include abstracts.tablet {
+      left: calc(50% + 32px);
+      transform: translateX(0);
+    }
   }
 }

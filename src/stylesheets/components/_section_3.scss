@@ -4,6 +4,10 @@
   padding: 52px 50px 42px 50px;
   background-color: abstracts.$second-pimary;
 
+  @include abstracts.tablet {
+    padding: 56px 24px 80px 24px;
+  }
+
   &__title {
     color: #fff;
     text-align: center;
@@ -11,5 +15,18 @@
     font-size: 20px;
     line-height: 23px;
     margin-bottom: 20px;
+
+    @include abstracts.tablet {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+
+  &__card {
+    @include abstracts.tablet {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+    }
   }
 }

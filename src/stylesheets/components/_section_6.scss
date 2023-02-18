@@ -30,6 +30,26 @@
     &::-ms-expand {
       display: none;
     }
+
+    @include abstracts.tablet {
+      display: none;
+    }
+  }
+
+  &__places {
+    display: none;
+
+    @include abstracts.tablet {
+      @include abstracts.flex(center, center);
+      gap: 53px;
+      margin-bottom: 20px;
+
+      .place-name {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
   }
 
   &__imgs {
@@ -38,5 +58,11 @@
     gap: 8px;
     max-width: 340px;
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+
+    @include abstracts.tablet {
+      max-width: calc(100% - 86 * 2px);
+      gap: 10px;
+      grid-template-columns: repeat(auto-fill, minmax(192px, 1fr));
+    }
   }
 }

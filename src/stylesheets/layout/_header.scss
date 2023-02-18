@@ -9,6 +9,12 @@
   width: 100%;
   @include abstracts.flex(center, space-between);
 
+  @include abstracts.tablet {
+    padding-left: 31px;
+    padding-right: 24px;
+    height: abstracts.$header-height-tablet;
+  }
+
   &__title {
     font-weight: 400;
     font-size: 24px;
@@ -19,5 +25,33 @@
 
   &__menu {
     cursor: pointer;
+
+    @include abstracts.tablet {
+      display: none;
+    }
+  }
+
+  &__category {
+    display: none;
+
+    @include abstracts.tablet {
+      display: block;
+      color: #fff;
+      cursor: pointer;
+      @include abstracts.flex(center);
+      gap: 30px;
+
+      .category-name {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+
+        &--active {
+          border: 2px solid #ffffff;
+          border-radius: 50px;
+          padding: 13px 35px;
+        }
+      }
+    }
   }
 }

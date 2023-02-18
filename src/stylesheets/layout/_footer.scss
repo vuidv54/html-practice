@@ -5,10 +5,18 @@
   padding: 32px 9px 24.03px 14px;
   background-color: abstracts.$second-pimary;
 
+  @include abstracts.tablet {
+    padding: 24px;
+  }
+
   &__about {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+
+    @include abstracts.tablet {
+      grid-template-columns: 2fr 1fr 2fr;
+    }
 
     .about-contact,
     .about-socials,
@@ -44,6 +52,11 @@
       grid-column-start: 1;
       grid-column-end: 3;
 
+      @include abstracts.tablet {
+        grid-column-start: 3;
+        grid-column-end: 4;
+      }
+
       &__desc {
         font-weight: 400;
         font-size: 11px;
@@ -59,11 +72,20 @@
     background: #7d7d7d;
     transform: matrix(1, 0, 0, -1, 0, 0);
     margin-bottom: 12px;
+
+    @include abstracts.tablet {
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
   }
 
   &__menu {
     @include abstracts.flex(center, space-between);
     flex-wrap: wrap;
+
+    @include abstracts.tablet {
+      display: none;
+    }
 
     .menu-title {
       font-weight: 400;
@@ -83,6 +105,22 @@
 
     .author {
       opacity: 0.5;
+    }
+
+    .category {
+      display: none;
+
+      @include abstracts.tablet {
+        @include abstracts.flex(center);
+        gap: 18px;
+
+        &-title {
+          font-weight: 400;
+          font-size: 11px;
+          line-height: 16px;
+          cursor: pointer;
+        }
+      }
     }
 
     .to-top {

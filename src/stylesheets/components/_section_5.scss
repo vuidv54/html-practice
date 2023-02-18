@@ -6,6 +6,10 @@
   text-align: center;
   background-color: abstracts.$second-pimary;
 
+  @include abstracts.tablet {
+    padding: 57px 24px 72px 24px;
+  }
+
   &__title {
     line-height: 40px;
     margin-bottom: 15px;
@@ -16,5 +20,19 @@
     font-size: 11px;
     line-height: 16px;
     margin-bottom: 28px;
+
+    @include abstracts.tablet {
+      max-width: 430px;
+      margin: 0 auto;
+      margin-bottom: 36px;
+    }
+  }
+
+  &__card {
+    @include abstracts.tablet {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+    }
   }
 }

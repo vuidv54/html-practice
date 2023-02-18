@@ -5,8 +5,14 @@
     margin-top: 40px;
   }
 
-  max-width: 240px;
+  width: 220px;
   margin: 0 auto;
+
+  @include abstracts.tablet {
+    & + & {
+      margin-top: 0;
+    }
+  }
 
   background: linear-gradient(
     223.49deg,

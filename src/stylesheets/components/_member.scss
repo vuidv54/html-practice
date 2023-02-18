@@ -5,6 +5,12 @@
     margin-top: 36px;
   }
 
+  @include abstracts.tablet {
+    & + & {
+      margin: 0;
+    }
+  }
+
   max-width: 400px;
   margin: 0 auto;
 
@@ -16,6 +22,12 @@
       $avatar-width: 48px;
       width: $avatar-width;
       height: $avatar-width;
+
+      @include abstracts.tablet {
+        $avatar-width: 64px;
+        width: $avatar-width;
+        height: $avatar-width;
+      }
     }
   }
 
