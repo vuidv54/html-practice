@@ -1,0 +1,28 @@
+@use '../abstracts/' as abstracts;
+
+.section-9 {
+  max-width: 410px;
+  height: 268px;
+  margin: 0 auto;
+  position: relative;
+
+  svg {
+    position: absolute;
+    z-index: 4;
+    top: 92px;
+    left: 60%;
+    transform: translateX(-60%);
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    position: absolute;
+    top: 113px;
+    left: calc(60% + 16px);
+    transform: translateX(-60%);
+    z-index: 5;
+    width: 159px;
+  }
+}

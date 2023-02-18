@@ -1,18 +1,77 @@
 @use '../abstracts/' as abstracts;
 
 .sign-up-form {
-  background: linear-gradient(
-    224.09deg,
-    rgba(255, 255, 255, 0.7) 5.13%,
-    rgba(255, 255, 255, 7e-5) 90.88%
-  );
-  background-blend-mode: soft-light;
-  border-radius: 8px;
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  max-width: 320px;
+  margin: auto;
+  padding: 35px 20px 36px 20px;
+  border-radius: 8px;
+  background-color: abstracts.$second-pimary;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
 
   &::before {
     content: '';
     display: block;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+      224.09deg,
+      rgba(255, 255, 255, 0.7) 5.13%,
+      rgba(255, 255, 255, 7e-5) 90.88%
+    );
+    background-blend-mode: soft-light;
+    border-radius: 8px;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+    color: abstracts.$first-pimary;
+  }
+
+  &__input {
+    width: 100%;
+    opacity: 0.8;
+    border-radius: 4px;
+    border: 1px solid #999999;
+    padding: 8px 14px;
+    color: abstracts.$second-pimary;
+
+    & + & {
+      margin-top: 16px;
+    }
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 13px;
+    }
+  }
+
+  &__offer {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 24px;
+    text-decoration: underline;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: abstracts.$first-pimary;
+  }
+
+  &__button {
+    font-family: 'Roboto', sans-serif;
+    color: abstracts.$second-pimary;
+    background-color: abstracts.$first-pimary;
+    border-radius: 50px;
+    font-weight: 400;
+    font-size: 11px;
+    width: 140px;
+    line-height: 13px;
+    border: none;
+    padding: 9px 12px;
   }
 }
