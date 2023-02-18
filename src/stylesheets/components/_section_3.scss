@@ -8,6 +8,10 @@
     padding: 56px 24px 80px 24px;
   }
 
+  @include abstracts.PC {
+    padding: 52px 150px 116px 150px;
+  }
+
   &__title {
     color: #fff;
     text-align: center;
@@ -20,10 +24,21 @@
       font-size: 32px;
       line-height: 40px;
     }
+
+    @include abstracts.PC {
+      font-size: 44px;
+      line-height: 48px;
+    }
   }
 
   &__card {
     @include abstracts.tablet {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+    }
+
+    @include abstracts.PC {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 30px;

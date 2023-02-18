@@ -10,6 +10,10 @@
     padding: 57px 24px 72px 24px;
   }
 
+  @include abstracts.PC {
+    padding: 44px 150px 91px 150px;
+  }
+
   &__title {
     line-height: 40px;
     margin-bottom: 15px;
@@ -26,10 +30,24 @@
       margin: 0 auto;
       margin-bottom: 36px;
     }
+
+    @include abstracts.PC {
+      max-width: 430px;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0 auto;
+      margin-bottom: 33px;
+    }
   }
 
   &__card {
     @include abstracts.tablet {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 30px;
+    }
+
+    @include abstracts.PC {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 30px;

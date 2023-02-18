@@ -14,6 +14,15 @@
     }
   }
 
+  @include abstracts.PC {
+    & + & {
+      margin-top: 0;
+    }
+
+    width: 100%;
+    max-width: 360px;
+  }
+
   background: linear-gradient(
     223.49deg,
     rgba(0, 0, 0, 0.0001) 4.85%,
@@ -31,6 +40,11 @@
     font-size: 12px;
     line-height: 16px;
     margin-bottom: 19.78px;
+
+    @include abstracts.PC {
+      font-size: 18px;
+      line-height: 27px;
+    }
   }
 
   &__img {
@@ -38,6 +52,11 @@
     width: $img-width;
     margin: 0 auto;
     margin-bottom: 23px;
+
+    @include abstracts.PC {
+      $img-width: 63.64px;
+      width: $img-width;
+    }
   }
 
   &__title {
@@ -45,6 +64,11 @@
     font-size: 11px;
     line-height: 16px;
     margin-bottom: 8px;
+
+    @include abstracts.PC {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   &__description {
@@ -52,6 +76,11 @@
     font-size: 11px;
     line-height: 16px;
     margin-bottom: 19.26px;
+
+    @include abstracts.PC {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   &__button {
@@ -68,5 +97,12 @@
     padding: 9px 0;
     cursor: pointer;
     background-color: abstracts.$first-pimary;
+
+    @include abstracts.PC {
+      font-size: 16px;
+      line-height: 19px;
+      width: 200px;
+      margin: 0 auto;
+    }
   }
 }

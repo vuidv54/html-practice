@@ -7,7 +7,7 @@
 }
 
 @mixin PC {
-  @media screen and (max-width: calc(v.$mobile-width + 1px)) {
+  @media screen and (min-width: calc(v.$tablet-width + 1px)) {
     @content;
   }
 }

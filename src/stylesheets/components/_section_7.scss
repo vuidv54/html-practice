@@ -5,6 +5,11 @@
   padding: 44px 29.8px 55.62px 27.61px;
   @include abstracts.bg-img('../assets/images/section-7/background.png');
 
+  @include abstracts.PC {
+    padding-top: 72px;
+    padding-bottom: 48px;
+  }
+
   &__title {
     color: #fff;
     line-height: 40px;
@@ -12,6 +17,10 @@
 
     @include abstracts.tablet {
       margin-bottom: 26px;
+    }
+
+    @include abstracts.PC {
+      margin-bottom: 36px;
     }
   }
 }

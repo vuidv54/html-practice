@@ -5,7 +5,38 @@
   text-align: center;
   @include abstracts.flex(center, center, column);
 
+  @include abstracts.PC {
+    padding: 100px 250px 83px 250px;
+  }
+
+  &__wrapper {
+    position: relative;
+
+    .section-4__next,
+    .section-4__prev {
+      position: absolute;
+      top: 50%;
+      cursor: pointer;
+      transform: translateY(-50%);
+      display: none;
+
+      @include abstracts.PC {
+        display: block;
+      }
+    }
+
+    .section-4__next {
+      right: -140px;
+    }
+
+    .section-4__prev {
+      left: -140px;
+    }
+  }
+
   &__avatar {
+    margin-left: auto;
+    margin-right: auto;
     $img-width: 87.72px;
     width: $img-width;
     height: $img-width;
@@ -16,6 +47,13 @@
       width: $img-width;
       height: $img-width;
     }
+
+    @include abstracts.PC {
+      $img-width: 172px;
+      width: $img-width;
+      height: $img-width;
+      margin-bottom: 28px;
+    }
   }
 
   &__title {
@@ -23,6 +61,11 @@
     font-size: 12px;
     line-height: 16px;
     margin-bottom: 16px;
+
+    @include abstracts.PC {
+      font-size: 18px;
+      line-height: 27px;
+    }
   }
 
   &__description {
@@ -34,6 +77,13 @@
     @include abstracts.tablet {
       max-width: 470px;
     }
+
+    @include abstracts.PC {
+      max-width: 555px;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 53px;
+    }
   }
 
   &__dots {
@@ -44,11 +94,17 @@
       $dot-width: 8px;
       display: block;
       width: $dot-width;
-      height: 8px;
+      height: $dot-width;
       background-color: abstracts.$second-pimary;
       border-radius: 50%;
       position: relative;
       z-index: 1;
+
+      @include abstracts.PC {
+        $dot-width: 14px;
+        width: $dot-width;
+        height: $dot-width;
+      }
 
       &.dot-item--no-active {
         &::after {
@@ -63,6 +119,12 @@
           transform: translate(-50%, -50%);
           top: 50%;
           left: 50%;
+
+          @include abstracts.PC {
+            $dot-inner-width: 10px;
+            width: $dot-inner-width;
+            height: $dot-inner-width;
+          }
         }
       }
     }

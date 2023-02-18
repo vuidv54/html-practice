@@ -6,14 +6,27 @@
   margin: 0 auto;
   position: relative;
 
+  @include abstracts.PC {
+    max-width: 100%;
+    height: 400px;
+    background-color: #d8d8d8;
+  }
+
   svg {
     position: absolute;
     z-index: 4;
     top: 92px;
     left: 60%;
     transform: translateX(-60%);
+
     @include abstracts.tablet {
       left: 50%;
+      transform: translateX(0);
+    }
+
+    @include abstracts.PC {
+      left: 55%;
+      top: 201px;
       transform: translateX(0);
     }
   }
@@ -31,6 +44,12 @@
 
     @include abstracts.tablet {
       left: calc(50% + 32px);
+      transform: translateX(0);
+    }
+
+    @include abstracts.PC {
+      top: 222px;
+      left: calc(55% + 32px);
       transform: translateX(0);
     }
   }

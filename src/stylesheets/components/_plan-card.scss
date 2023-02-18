@@ -11,6 +11,15 @@
     }
   }
 
+  @include abstracts.PC {
+    & + & {
+      margin-top: 0;
+    }
+    width: 100%;
+
+    max-width: 360px;
+  }
+
   width: 220px;
   margin: 0 auto;
   padding: 28px 40px;
@@ -58,6 +67,12 @@
     @include abstracts.tablet {
       margin-bottom: 8px;
     }
+
+    @include abstracts.PC {
+      margin-bottom: 16px;
+      font-size: 18px;
+      line-height: 27px;
+    }
   }
 
   &__prices {
@@ -71,6 +86,12 @@
       font-size: 36px;
     }
 
+    @include abstracts.PC {
+      font-size: 64px;
+      line-height: 48px;
+      margin-bottom: 15px;
+    }
+
     .prices-unit {
       position: absolute;
       top: 10px;
@@ -78,6 +99,13 @@
       font-weight: 400;
       font-size: 11px;
       line-height: 13px;
+
+      @include abstracts.PC {
+        font-size: 24px;
+        line-height: 28px;
+        left: -20px;
+        top: 0;
+      }
     }
   }
 
@@ -86,6 +114,11 @@
     font-size: 12px;
     color: #fff;
     margin-bottom: 14px;
+
+    @include abstracts.PC {
+      font-size: 18px;
+      line-height: 27px;
+    }
   }
 
   &__desc {
@@ -96,6 +129,11 @@
       text-align: center;
       font-weight: 400;
       font-size: 11px;
+
+      @include abstracts.PC {
+        font-size: 16px;
+        line-height: 24px;
+      }
     }
 
     .desc + .desc {
@@ -116,5 +154,11 @@
     letter-spacing: 1px;
     cursor: pointer;
     background-color: abstracts.$first-pimary;
+
+    @include abstracts.PC {
+      font-size: 16px;
+      line-height: 19px;
+      width: 165px;
+    }
   }
 }

@@ -11,6 +11,10 @@
     @include abstracts.tablet {
       margin-bottom: 23px;
     }
+
+    @include abstracts.PC {
+      margin-bottom: 53px;
+    }
   }
 
   &__members {
@@ -19,6 +23,13 @@
       grid-template-columns: 1fr 1fr;
       gap: 30px;
       padding: 0 60px;
+    }
+
+    @include abstracts.PC {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 32px;
+      padding: 0 150px;
     }
   }
 }

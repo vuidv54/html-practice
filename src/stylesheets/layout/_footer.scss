@@ -9,12 +9,20 @@
     padding: 24px;
   }
 
+  @include abstracts.PC {
+    padding: 50px 150px 38px 150px;
+  }
+
   &__about {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 
     @include abstracts.tablet {
+      grid-template-columns: 2fr 1fr 2fr;
+    }
+
+    @include abstracts.PC {
       grid-template-columns: 2fr 1fr 2fr;
     }
 
@@ -26,6 +34,11 @@
         font-size: 12px;
         line-height: 14px;
         margin-bottom: 16px;
+
+        @include abstracts.PC {
+          font-size: 18px;
+          line-height: 24px;
+        }
       }
     }
 
@@ -35,6 +48,11 @@
         font-size: 11px;
         line-height: 16px;
         opacity: 0.5;
+
+        @include abstracts.PC {
+          font-size: 16px;
+          line-height: 24px;
+        }
       }
     }
 
@@ -57,12 +75,22 @@
         grid-column-end: 4;
       }
 
+      @include abstracts.PC {
+        grid-column-start: 3;
+        grid-column-end: 4;
+      }
+
       &__desc {
         font-weight: 400;
         font-size: 11px;
         line-height: 16px;
         opacity: 0.5;
         margin-bottom: 19px;
+
+        @include abstracts.PC {
+          font-size: 16px;
+          line-height: 24px;
+        }
       }
     }
   }
@@ -77,6 +105,11 @@
       margin-top: 20px;
       margin-bottom: 15px;
     }
+
+    @include abstracts.PC {
+      margin-top: 16px;
+      margin-bottom: 23px;
+    }
   }
 
   &__menu {
@@ -84,6 +117,10 @@
     flex-wrap: wrap;
 
     @include abstracts.tablet {
+      display: none;
+    }
+
+    @include abstracts.PC {
       display: none;
     }
 
@@ -103,6 +140,11 @@
     font-size: 11px;
     line-height: 16px;
 
+    @include abstracts.PC {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
     .author {
       opacity: 0.5;
     }
@@ -110,16 +152,26 @@
     .category {
       display: none;
 
+      &-title {
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 16px;
+        cursor: pointer;
+
+        @include abstracts.PC {
+          font-size: 18px;
+          line-height: 24px;
+        }
+      }
+
       @include abstracts.tablet {
         @include abstracts.flex(center);
         gap: 18px;
+      }
 
-        &-title {
-          font-weight: 400;
-          font-size: 11px;
-          line-height: 16px;
-          cursor: pointer;
-        }
+      @include abstracts.PC {
+        @include abstracts.flex(center);
+        gap: 41px;
       }
     }
 

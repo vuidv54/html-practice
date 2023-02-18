@@ -18,6 +18,12 @@
       line-height: 36px;
       max-width: 412px;
     }
+
+    @include abstracts.PC {
+      font-size: 44px;
+      line-height: 48px;
+      max-width: 900px;
+    }
   }
 
   &__offer {
@@ -26,14 +32,24 @@
     line-height: 16px;
     text-align: center;
     margin-bottom: 20px;
+
+    @include abstracts.PC {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   &__input {
     padding: 0 10px;
-    @include abstracts.flex();
+    @include abstracts.flex(center);
     flex-direction: column;
 
     @include abstracts.tablet {
+      flex-direction: row;
+      gap: 16px;
+    }
+
+    @include abstracts.PC {
       flex-direction: row;
       gap: 16px;
     }
@@ -49,7 +65,14 @@
 
       @include abstracts.tablet {
         width: 228px;
+        margin: 0;
         padding: 12px 46px 12px 13px;
+      }
+
+      @include abstracts.PC {
+        width: 270px;
+        margin: 0;
+        padding: 12px 46px 12px 18px;
       }
 
       &::placeholder {
@@ -57,6 +80,11 @@
         font-size: 12px;
         line-height: 14px;
         color: abstracts.$second-pimary;
+
+        @include abstracts.PC {
+          font-size: 16px;
+          line-height: 27px;
+        }
       }
     }
   }
@@ -77,6 +105,14 @@
     @include abstracts.tablet {
       width: 140px;
       padding: 13px;
+      margin: 0;
+    }
+
+    @include abstracts.PC {
+      width: 198px;
+      margin: 0;
+      font-size: 16px;
+      line-height: 19px;
     }
   }
 
@@ -86,6 +122,12 @@
 
     @include abstracts.tablet {
       width: 345px;
+      margin-top: 40px;
+    }
+
+    @include abstracts.PC {
+      width: 360px;
+      margin-top: 59px;
     }
   }
 }

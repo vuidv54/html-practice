@@ -9,4 +9,9 @@
     font-size: 32px;
     line-height: 36px;
   }
+
+  @include abstracts.PC {
+    font-size: 44px;
+    line-height: 48px;
+  }
 }
